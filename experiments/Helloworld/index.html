@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="../../build/react.js"></script>
+    <script type="text/javascript" src="../../build/react-dom.js"></script>
+    <script type="text/javascript" src="../../build/lib/browser.js"></script>
+  </head>
+  <body>
+
+  	<div id="app"></div>
+  <script type="text/babel">
+
+
+  var Counter = React.createClass({
+        getInitialState: function () {
+          return { message: "Hello World" };
+        },
+        render: function () {
+          return (
+            <h1>
+              Your message goes here: {this.state.message}
+            </h1>
+          );
+        }
+      });
+
+
+  ReactDOM.render(
+        <Counter />,
+        document.getElementById('app')
+      );
+  	
+  </script>
+  </body>
+</html>
