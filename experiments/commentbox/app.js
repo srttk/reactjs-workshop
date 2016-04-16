@@ -7,11 +7,43 @@ var data = [
 
 var Commentbox = React.createClass({
 
+  getInitialState:function(){
+    return {data:[]};
+  },
+
+  fetchData:function(){
+    $.ajax({
+      "url":this.props.url,
+      "dataType":"json",
+      success:function(response,a,b){
+
+        if(b.status == 200){
+
+          this.setState({data:response});
+
+        }
+
+
+      }.bind(this),
+      error:function(){
+        alert("Error");
+      }.bind(this)
+
+    });
+  },
+
+  componentDidMount:function(){
+
+    this.fetchData();
+
+    setInterval(this.fetchData,this.props.refresh || 3000);
+  },
+
   render:function(){
     return(
       <div class="commentbox">
         Hello World !, Im a commentbox.
-        <CommentList data={this.props.data}/>
+        <CommentList data={this.state.data}/>
         <CommentForm/>
       </div>
     );
@@ -69,4 +101,4 @@ var CommentForm = React.createClass({
 // Dom Render
 
 
-ReactDOM.render(<Commentbox data={data}/>,document.getElementById("content"));
+ReactDOM.render(<Commentbox url="data.json"/>,document.getElementById("content"));
