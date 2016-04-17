@@ -15,6 +15,7 @@ var Commentbox = React.createClass({
     $.ajax({
       "url":this.props.url,
       "dataType":"json",
+      "cache":false,
       success:function(response,a,b){
 
         if(b.status == 200){
