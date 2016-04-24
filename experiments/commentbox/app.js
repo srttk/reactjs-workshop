@@ -1,8 +1,3 @@
-var data = [
-  {id: 1, author: "Pete Hunt", text: "This is one comment"},
-  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
-];
-
 // Commentbox componenet
 
 var Commentbox = React.createClass({
@@ -43,7 +38,7 @@ var Commentbox = React.createClass({
   render:function(){
     return(
       <div class="commentbox">
-        Hello World !, Im a commentbox.
+        <CommentboxHeader></CommentboxHeader>
         <CommentList data={this.state.data}/>
         <CommentForm/>
       </div>
@@ -86,14 +81,50 @@ var Comment = React.createClass({
 // Comment Form
 
 var CommentForm = React.createClass({
+  getInitialState:function(){
+    return {"name":"Sarath","text":"Hello"};
+  },
+
+  handleName:function(e){
+
+    this.setState({"name":e.target.value});
+
+  },
+
+  handleText:function(e){
+    //alert(e.target.value);
+    this.setState({"text":e.target.value});
+
+  },
+
+  handleSubmit:function(){
+    console.log(this.state);
+    this.setState({"name":"","text":""});
+  },
 
   render:function(){
   return(
 
     <div>
-    Comment form
+      <h2>Leave comment : </h2>
+      <input type="text" onChange={this.handleName} value={this.state.name}/><br/>
+      <textarea onChange={this.handleText} value={this.state.text}></textarea><br/>
+      <button onClick={this.handleSubmit}>Submit</button>
     </div>
   )
+  }
+
+});
+
+// CommentboxHeader
+
+var CommentboxHeader = React.createClass({
+
+  render:function(){
+    return(
+
+      <h1>CommentBox App </h1>
+    )
   }
 
 });
