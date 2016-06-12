@@ -3,7 +3,7 @@
   var Circle = React.createClass({
     sayHello:function(){
 
-      alert(this.props.bgcolor);
+      alert(this.props.bgcolor);` `
 
     },
     render: function() {
@@ -18,7 +18,7 @@
         };
 
         return (
-          <div style={circleStyle} onClick={this.sayHello}>
+          <div style={circleStyle} onMouseOver={this.sayHello}>
           </div>
         );
       }

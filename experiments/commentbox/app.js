@@ -27,12 +27,21 @@ var Commentbox = React.createClass({
 
     });
   },
+  handleCommentSubmit:function(comment){
+    console.info(comment);
+    var data = this.state.data;
 
+    data.push({id:Math.floor((Math.random() * 100) + 1),author:comment.name,text:comment.text})
+
+    this.setState({data:data});
+    alert("Hello");
+
+  },
   componentDidMount:function(){
 
     this.fetchData();
 
-    setInterval(this.fetchData,this.props.refresh || 3000);
+    //setInterval(this.fetchData,this.props.refresh || 3000);
   },
 
   render:function(){
@@ -40,7 +49,7 @@ var Commentbox = React.createClass({
       <div class="commentbox">
         <CommentboxHeader></CommentboxHeader>
         <CommentList data={this.state.data}/>
-        <CommentForm/>
+        <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
       </div>
     );
   }
@@ -70,7 +79,7 @@ var CommentList = React.createClass({
 var Comment = React.createClass({
   render:function(){
     return(
-      <div class="comment">
+      <div className="comment">
         <h2>{this.props.author}</h2>
         <p>{this.props.children}</p>
       </div>
@@ -97,19 +106,24 @@ var CommentForm = React.createClass({
 
   },
 
-  handleSubmit:function(){
+  handleSubmit:function(e){
     console.log(this.state);
+    this.props.onCommentSubmit(this.state);
     this.setState({"name":"","text":""});
+    e.preventDefault();
   },
 
   render:function(){
   return(
 
     <div>
+      <form onSubmit={this.handleSubmit}>
       <h2>Leave comment : </h2>
       <input type="text" onChange={this.handleName} value={this.state.name}/><br/>
       <textarea onChange={this.handleText} value={this.state.text}></textarea><br/>
       <button onClick={this.handleSubmit}>Submit</button>
+      </form>
+
     </div>
   )
   }
