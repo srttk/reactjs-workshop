@@ -13,11 +13,7 @@
 
 ```bash
 npm run <example>
-```
 
-Example
-
-```bash
 # To run example Hello World
 npm run  hello
 ```
