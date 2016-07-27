@@ -1,0 +1,19 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server",
+    "hello": "lite-server Helloworld",
+    "circle": "lite-server circle",
+    "commentbox": "lite-server commentbox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
