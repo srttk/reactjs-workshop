@@ -8,7 +8,8 @@
     "dev": "lite-server",
     "hello": "lite-server Helloworld",
     "circle": "lite-server circle",
-    "commentbox": "lite-server commentbox"
+    "commentbox": "lite-server commentbox",
+    "states": "lite-server states"
   },
   "keywords": [],
   "author": "",
