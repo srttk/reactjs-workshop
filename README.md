@@ -1,4 +1,4 @@
-# Reactjs-Workshop
+# Reactjs-Workshop :rocket:
 
 
 ### Examples
@@ -9,7 +9,7 @@
 
 
 
-### Running Examples
+### Running Examples :sailboat:
 
 ```bash
 npm run <example>
@@ -18,4 +18,6 @@ npm run <example>
 npm run  hello
 ```
 
-#### Good Luck!!!
+#### Good Luck!!! :v:
+
+By Sarath with :blue_heart: 
