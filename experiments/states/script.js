@@ -25,4 +25,25 @@ var Header = React.createClass({
   }
 })
 
-ReactDOM.render(<Header title="Hey"/>,document.getElementById('app'));
+// Main //
+var Main = React.createClass({
+
+  getInitialState:function(){
+
+    return {HeaderData:{title:'Title',body:'Body'}}
+
+  },
+
+  render:function(){
+    return(
+
+      <div>
+        <Header title={this.state.HeaderData.title}></Header>
+      </div>
+
+    );
+  }
+
+});
+
+ReactDOM.render(<Main title="Hey"/>,document.getElementById('app'));
