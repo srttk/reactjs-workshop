@@ -1,0 +1,26 @@
+{
+  "name": "react-workshop",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sarath <sarath.hacks@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/saratonite/reactjs-workshop",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "build",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.2.1",
+    "flux": "^2.1.1",
+    "react-router": "^2.6.1",
+    "babel": "^5.8.38"
+  }
+}

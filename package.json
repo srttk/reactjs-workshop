@@ -9,7 +9,8 @@
     "hello": "lite-server Helloworld",
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
-    "states": "lite-server states"
+    "states": "lite-server states",
+    "bowerpack": "lite-server bowerpacks"
   },
   "keywords": [],
   "author": "",
