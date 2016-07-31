@@ -10,7 +10,7 @@
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
     "states": "lite-server states",
-    "bowerpack": "lite-server bowerpacks"
+    "router": "lite-server router"
   },
   "keywords": [],
   "author": "",
