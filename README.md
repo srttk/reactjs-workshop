@@ -1,7 +1,19 @@
 # Reactjs-Workshop :rocket:
 
 
-### Examples
+### Installation :rowboat:
+
+Install lite-server globally via npm
+```bash
+npm install -g lite-server
+```
+
+Install bower dependencies using bower Install
+```bash
+bower install
+```
+
+### Examples :triangular_flag_on_post:
 
 1. Hello World <hello>
 2. Circle <circle>
@@ -20,4 +32,4 @@ npm run  hello
 
 #### Good Luck!!! :v:
 
-By Sarath with :blue_heart: 
+By :surfer: Sarath with :blue_heart:
