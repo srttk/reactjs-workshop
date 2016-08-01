@@ -47,6 +47,12 @@ var Square = React.createClass({
 
 //Label component
 var Label = React.createClass({
+  handleClickCopy:function(e){
+
+    console.log(e);
+    //TODO : Copy to clipboard
+
+  },
   render:function(){
 
     var labelStyle = {
@@ -56,7 +62,7 @@ var Label = React.createClass({
      margin: 0
    };
     return(
-      <div style={labelStyle}>
+      <div style={labelStyle} onClick={this.handleClickCopy}>
         {this.props.color}
       </div>
     )
@@ -64,14 +70,54 @@ var Label = React.createClass({
 });
 //The Main
 var Main = React.createClass({
+
+  getInitialState:function(){
+    return {
+      newcolor:'',
+      colors:[
+        "#f56",
+        '#5f6',
+        '#56f',
+        '#cfa',
+        '#333',
+        '#123',
+        '#321',
+        '#564'
+      ]
+    }
+  },
+  handleChangeText:function(e){
+
+    this.setState({newcolor:e.target.value});
+
+
+  },
+  handleButtonClick:function(){
+
+    console.log("Button click");
+
+    if(this.state.newcolor.length <3) return false;
+
+    var colors = this.state.colors;
+    colors.push(this.state.newcolor);
+    this.setState({colors:colors});
+    this.setState({newcolor:''});
+
+  },
   render:function(){
+    var cards = this.state.colors.map(function(color,i){
+
+      return(<Card key={i} color={color}/>);
+
+    });
     return(
       <div>
       <h1>Cards</h1>
-      
-      <Card color="#f56"/>
-      <Card color="#667"/>
-      <Card color="#ef8"/>
+        <div>
+          <input type="text" onChange={this.handleChangeText} value={this.state.newcolor}  />
+          <button onClick={this.handleButtonClick}>ADD</button>
+        </div>
+        {cards}
       </div>
     );
   }
