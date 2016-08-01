@@ -9,6 +9,7 @@
     "hello": "lite-server Helloworld",
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
+    "events": "lite-server events",
     "states": "lite-server states",
     "router": "lite-server router"
   },
