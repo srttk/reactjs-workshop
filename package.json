@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server",
     "hello": "lite-server Helloworld",
+    "card": "lite-server card",
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
     "events": "lite-server events",

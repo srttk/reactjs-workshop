@@ -6,6 +6,7 @@ var Main = React.createClass({
       <div>
       <h1>The Events </h1>
       <Counter/>
+      <Duck/>
       </div>
 
     );
@@ -55,6 +56,37 @@ var Counter = React.createClass({
     </div>);
   }
 
+});
+
+/////////////////Custom Event component
+var Duck = React.createClass({
+  handleDuckWalk:function(){
+
+    alert("Duck is walking....");
+
+  },
+  handleClick:function(){
+    console.log('Cliked on Duck');
+    var walkEvent = new Event('duckWalk');
+
+    window.dispatchEvent(walkEvent);
+
+  },
+  componentDidMount:function(){
+    // Add Listener for custom Event
+    window.addEventListener('duckWalk',this.handleDuckWalk);
+  },
+  componentWillUnmount:function(){
+
+    window.removeEventListener('duckWalk',this.handleDuckWalk);
+
+  },
+  render:function(){
+    return (<div>
+      <h4>Custom Event</h4>
+      <button onClick={this.handleClick}>Duck!!</button>
+    </div>);
+  }
 });
 
 
