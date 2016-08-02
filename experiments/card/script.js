@@ -93,14 +93,23 @@ var Main = React.createClass({
 
 
   },
+  handleFormSubmit:function(e){
+    this.addColor();
+    e.preventDefault();
+
+  },
   handleButtonClick:function(){
 
-    console.log("Button click");
+    this.addColor();
+    
+
+  },
+  addColor:function(){
 
     if(this.state.newcolor.length <3) return false;
 
     var colors = this.state.colors;
-    colors.push(this.state.newcolor);
+    colors.unshift(this.state.newcolor);
     this.setState({colors:colors});
     this.setState({newcolor:''});
 
@@ -114,10 +123,10 @@ var Main = React.createClass({
     return(
       <div>
       <h1>Cards</h1>
-        <div>
+        <form onSubmit={this.handleFormSubmit}>
           <input type="text" onChange={this.handleChangeText} value={this.state.newcolor}  />
           <button onClick={this.handleButtonClick}>ADD</button>
-        </div>
+        </form>
         {cards}
       </div>
     );
