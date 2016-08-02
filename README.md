@@ -15,9 +15,13 @@ bower install
 
 ### Examples :triangular_flag_on_post:
 
-1. Hello World <hello>
-2. Circle <circle>
-3. Commentbox <commentbox>
++ Hello World <hello>
++ States <states>
++ Events <events>
++ Circle <circle>
++ Commentbox <commentbox>
++ Card <card>
++ Router <router>
 
 
 
