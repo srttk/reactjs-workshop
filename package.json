@@ -11,6 +11,7 @@
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
     "events": "lite-server events",
+    "props": "lite-server props",
     "states": "lite-server states",
     "router": "lite-server router",
     "lifecycle": "lite-server lifecycle"
