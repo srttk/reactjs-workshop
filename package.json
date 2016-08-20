@@ -12,7 +12,9 @@
     "commentbox": "lite-server commentbox",
     "events": "lite-server events",
     "states": "lite-server states",
-    "router": "lite-server router"
+    "router": "lite-server router",
+    "redux": "lite-server redux",
+    "react-redux": "lite-server react-redux"
   },
   "keywords": [],
   "author": "",
