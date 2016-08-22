@@ -11,10 +11,12 @@
     "circle": "lite-server circle",
     "commentbox": "lite-server commentbox",
     "events": "lite-server events",
+    "props": "lite-server props",
     "states": "lite-server states",
     "router": "lite-server router",
     "redux": "lite-server redux",
-    "react-redux": "lite-server react-redux"
+    "react-redux": "lite-server react-redux",
+    "lifecycle": "lite-server lifecycle"
   },
   "keywords": [],
   "author": "",
