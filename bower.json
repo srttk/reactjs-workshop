@@ -23,6 +23,7 @@
     "react-router": "^2.6.1",
     "babel": "^5.8.38",
     "jquery": "^3.1.0",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "eventEmitter": "EventEmitter.js#^5.1.0"
   }
 }

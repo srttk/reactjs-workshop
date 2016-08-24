@@ -14,6 +14,7 @@
     "props": "lite-server props",
     "states": "lite-server states",
     "router": "lite-server router",
+    "flux": "lite-server flux",
     "redux": "lite-server redux",
     "react-redux": "lite-server react-redux",
     "lifecycle": "lite-server lifecycle"
