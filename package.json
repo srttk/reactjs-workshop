@@ -16,6 +16,7 @@
     "router": "lite-server router",
     "flux": "lite-server flux",
     "redux": "lite-server redux",
+    "redux-app": "lite-server redux-app",
     "react-redux": "lite-server react-redux",
     "lifecycle": "lite-server lifecycle"
   },

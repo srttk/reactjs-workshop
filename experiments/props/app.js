@@ -18,4 +18,8 @@ var App = React.createClass({
   }
 });
 
+var Alert = React.createClass({
+  render:function
+});
+
 ReactDOM.render(<App greetings="Universe"/>,document.getElementById('app'));
